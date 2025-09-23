@@ -11,6 +11,23 @@ html {
   scroll-behavior: smooth;
 }
 
+body.homepage {
+    background-image: url('background-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.content-box {
+    max-width: 800px;
+    background-color: var(--white-color);
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: var(--border-radius-m);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 :root {
 /*    colors */
     --white-color: #fff;
@@ -69,6 +86,13 @@ header {
     z-index: 999;
     position: sticky;
 }
+
+header, header .navbar, 
+.navbar .nav-container, 
+.navbar .nav-container .nav-menu .nav-link {
+  font-family: Helvetica, sans-serif;
+}
+
 
 header .navbar {
     display: flex;
