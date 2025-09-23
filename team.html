@@ -20,8 +20,9 @@
         }
 
         .team-member img {
-            width: 100%;
-            height: auto;
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
             border-radius: 8px;
         }
 
@@ -35,6 +36,30 @@
             font-size: 0.95em;
             color: #333;
         }
+
+        .linkedin-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #0077B5;
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .linkedin-button img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .linkedin-button:hover {
+            background-color: #005f8d;
+        }
+
     </style>
 </head>
 <body>
@@ -43,7 +68,7 @@
 
     <h2>Meet the Team</h2>
 
-    <div class="team-section">
+    <div class="team">
         <!-- Member 1 -->
         <div class="team-member">
             <img src="mdu.jpg" alt="Photo of Michelle Du">
