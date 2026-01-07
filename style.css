@@ -1,15 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-box {
+    max-width: 1000px;
+    padding: 40px;
+    margin: 0 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+ul {
+    list-style-position: inside;
+}
+/* 
+body.home {
+    background-image: url('../assets/background-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
 
 :root {
     --white-color: #fff;
@@ -47,12 +88,6 @@ header {
     top: 0;
     z-index: 999;
     position: sticky;
-}
-
-header, header .navbar, 
-.navbar .nav-container, 
-.navbar .nav-container .nav-menu .nav-link {
-    font-family: Helvetica, sans-serif;
 }
 
 header .navbar {
@@ -269,3 +304,16 @@ header .navbar {
     display: block;
     width: 100%;
 }
+
+#nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.nav-logo-img {
+    height: 36px;      
+    width: auto;
+    display: block;
+}
+
