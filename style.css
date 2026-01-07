@@ -317,3 +317,105 @@ header .navbar {
     display: block;
 }
 
+.team-section {
+    display: flex;
+    flex-direction: column; /* vertical stack of members */
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.team-intro {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.team-intro h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: 20px;
+}
+
+.team-intro p {
+    font-size: var(--font-size-m);
+    line-height: 1.6;
+}
+
+.team-member {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* LEFT SIDE: headshot + name */
+.team-member .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;     /* fixed width for image + name container */
+    flex-shrink: 0;   /* prevent shrinking */
+}
+
+.team-member .left-side img.headshot {
+    width: 180px;    /* fixed width */
+    height: auto;    /* maintain aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.team-member .left-side h3 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* RIGHT SIDE: experience paragraph */
+.team-member .right-side {
+    flex: 1; /* take remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -40px;
+}
+
+.team-member .right-side p {
+    margin-bottom: 5px;
+}
+
+/* LinkedIn icon below everything */
+.team-member .linkedin {
+    margin-top: 10px;
+}
+
+.team-member .linkedin img {
+    width: 26px;
+    height: auto;
+    display: inline-block;
+}
+
+/* RESPONSIVE FOR MOBILE */
+@media screen and (max-width: 768px) {
+    .team-member {
+        flex-direction: column; /* stack left + right vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-member .left-side {
+        width: auto; /* container shrinks to content */
+    }
+
+    .team-member .left-side img.headshot {
+        width: 120px; /* smaller on mobile */
+    }
+
+    .team-member .right-side {
+        width: 100%;
+    }
+}
+
+

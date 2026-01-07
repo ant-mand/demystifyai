@@ -1,103 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DemystifyAI Chicago | Team</title>
-        <link rel="stylesheet" href="../style.css">
-        <style>
-            body {
-                font-family: Helvetica, Arial, sans-serif;
-                line-height: 1.6;
-                color: #333;
-                margin: 0;
-                padding: 0;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemystifyAI Chicago | Team</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header id="navbar-placeholder"></header>
+    <script src="../app.js"></script>
 
-            .team-section {
-                max-width: 800px;
-                margin: 40px auto;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 40px;
-                padding: 20px;
-            }
+    <section class="team-intro">
+        <h1>Who Are We?</h1>
+        <p>
+            Equipping individuals with AI readiness skills empowers them to 
+            engage more confidently in AI-related conversations, recognize and challenge abuses of AI 
+            in both personal and civic contexts, and explore how AI can be meaningfully integrated 
+            into their personal and professional lives. 
+            <br></br>
+            We are students at the University of Chicago in Chicago, developing curriculum material for the everyday community member 
+            to build basic-intermediate AI literacy, foregrounding lived experiences and community input to co-create interesting, relevant, and impactful curriculum.
+        </p>
+    </section>
 
-            .team-member {
-                flex: 1 1 300px;
-                max-width: 300px;
-                text-align: center;
-            }
+    <div class="team-section">
 
-            .team-member img {
-                width: 200px;
-                height: 250px;
-                object-fit: cover;
-                border-radius: 8px;
-            }
-
-            .team-member h3 {
-                margin-top: 15px;
-                margin-bottom: 5px;
-                font-size: 1.2em;
-            }
-
-            .team-member p {
-                font-size: 1em;
-                color: #333;
-            }
-
-            .team-member p a img{
-                width: 24px;
-                height: auto;
-                vertical-align: middle;
-            }
-            ul{
-                list-style-position: inside;
-            }
-        </style>
-    </head>
-    <body>
-        <header id="navbar-placeholder"> </header>
-        <script src="../app.js"></script>
-
-        <div class="team-section">
-            <!-- Member 1 -->
-            <div class="team-member">
-                <img src="../assets/mdu.jpg" alt="Photo of Michelle Du">
+        <!-- Member 1 -->
+        <div class="team-member">
+            <div class="left-side">
+                <img src="../assets/mdu.jpg" alt="Photo of Michelle Du" class="headshot">
                 <h3>Michelle Du</h3>
-                <p>Undergraduate student at the University of Chicago pursuing degrees in data science and law, letters, & society with a focus on data and AI governance. </p>
-                <p>Her previous experience includes:</p>
-                    <ul>
-                        <li> Tech policy research intern at the Brookings Institution</li>
-                        <li> Intern at the Illinois Office of Broadband</li>
-                        <li> Digital literacy volunteer with Coalition for a Better Chinese American Community (CBCAC) </li>
-                    </ul>
-                <p>
+                <div class="linkedin">
                     <a href="https://www.linkedin.com/in/michelle-du-75906a1b2/" target="_blank">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:24px; vertical-align:middle;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
                     </a>
-                </p>
+                </div>
             </div>
-
-            <!-- Member 2 -->
-            <div class="team-member">
-                <img src="../assets/amanduva.jpg" alt="Photo of Antrita Manduva">
-                <h3>Antrita Manduva</h3>
-                <p>Master’s student at the University of Chicago pursuing a master’s in AI and Language with a focus on responsible AI and content moderation. </p>
-                <p>Her previous experience includes:</p>
-                    <ul>
-                        <li> Teaching Assistant for an AI literacy course</li>
-                        <li> Teaching AP Computer Science Principles for high schoolers</li>
-                        <li> Research on responsible AI </li>
-                    </ul>
+            <div class="right-side">
                 <p>
-                    <a href="https://www.linkedin.com/in/antrita-manduva/" target="_blank">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:24px; vertical-align:middle;">
-                    </a>
+                  Michelle is an undergraduate student at the University of Chicago pursuing degrees in data science and law, letters, & society, 
+                  with a focus on data and AI governance. She has previously worked as a Tech Policy Research Intern at the Brookings Institution and
+                  and interned with the Illinois Office of Broadband. She also volunteers regularly with the 
+                  Coalition for a Better Chinese American Community (CBCAC) as a digital literacy volunteer. Michelle loves mocha!
                 </p>
             </div>
         </div>
-    </body>
+
+        <!-- Member 2 -->
+        <div class="team-member">
+            <div class="left-side">
+                <img src="../assets/amanduva.jpg" alt="Photo of Antrita Manduva" class="headshot">
+                <h3>Antrita Manduva</h3>
+                <div class="linkedin">
+                    <a href="https://www.linkedin.com/in/antrita-manduva/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+            <div class="right-side">
+                <p>
+                  Antrita is a master's student at the University of Chicago pursuing a degree in the Digital Humanities. 
+                  With a background in computer science, a passion for filmmaking and theatre, and interest in human-centered design and policy,
+                  she is interested in creating accessible and inclusive AI technologies. Her previous experience
+                  includes assisting with research on AI literacy and algorithmic moderation. She has also interned 
+                  as a software engineer and business analyst. Antrita loves iced oat vanilla lattes! 
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
