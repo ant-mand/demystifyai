@@ -40,8 +40,116 @@ body {
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-ul {
-    list-style-position: inside;
+.about-box h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: var(--font-size-l);
+}
+
+.about-box h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: var(--font-size-m);
+}
+
+.about-box p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.about-box ul {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    line-height: 1.7;
+}
+
+.about-box ul.tracks li {
+    margin-bottom: 15px;
+}
+
+/* PARTNERSHIPS PAGE */
+.partnership-intro {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.partnership-intro h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: 20px;
+}
+
+.partnership-intro p {
+    font-size: var(--font-size-m);
+    line-height: 1.6;
+}
+
+.partnership-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.partner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.partner .left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.partner .left-side img.partner-logo {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.partner .right-side {
+    flex: 1;
+    min-width: 250px;
+}
+
+.partner .right-side h3 {
+    margin-bottom: 15px;
+    font-size: var(--font-size-l);
+}
+
+.partner .right-side p {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE FOR MOBILE */
+@media screen and (max-width: 768px) {
+    .partner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .partner .left-side {
+        width: 150px;
+    }
+
+    .partner .right-side {
+        width: 100%;
+    }
 }
 /* 
 body.home {
@@ -319,7 +427,7 @@ header .navbar {
 
 .team-section {
     display: flex;
-    flex-direction: column; /* vertical stack of members */
+    flex-direction: column; 
     gap: 40px;
     padding: 40px 20px;
 }
@@ -352,18 +460,17 @@ header .navbar {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* LEFT SIDE: headshot + name */
 .team-member .left-side {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;     /* fixed width for image + name container */
-    flex-shrink: 0;   /* prevent shrinking */
+    width: 200px;     
+    flex-shrink: 0;   
 }
 
 .team-member .left-side img.headshot {
-    width: 180px;    /* fixed width */
-    height: auto;    /* maintain aspect ratio */
+    width: 180px;   
+    height: auto;   
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -373,9 +480,8 @@ header .navbar {
     margin-bottom: 0;
 }
 
-/* RIGHT SIDE: experience paragraph */
 .team-member .right-side {
-    flex: 1; /* take remaining space */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -386,7 +492,6 @@ header .navbar {
     margin-bottom: 5px;
 }
 
-/* LinkedIn icon below everything */
 .team-member .linkedin {
     margin-top: 10px;
 }
@@ -397,20 +502,19 @@ header .navbar {
     display: inline-block;
 }
 
-/* RESPONSIVE FOR MOBILE */
 @media screen and (max-width: 768px) {
     .team-member {
-        flex-direction: column; /* stack left + right vertically */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
     }
 
     .team-member .left-side {
-        width: auto; /* container shrinks to content */
+        width: auto; 
     }
 
     .team-member .left-side img.headshot {
-        width: 120px; /* smaller on mobile */
+        width: 120px; 
     }
 
     .team-member .right-side {
