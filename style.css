@@ -16,6 +16,11 @@ html, body {
     margin: 0;
     padding: 0;
     color: #333;
+    background-image: url('../assets/background-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 body {
@@ -35,12 +40,22 @@ body {
     max-width: 1000px;
     padding: 40px;
     margin: 0 20px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-.about-box h2 {
+.about-box h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: 30px;
+}
+
+.about-box h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: 30px;
+}
+
+.about-box h1, .about-box h2, .about-box h3 {
     margin-top: 40px;
     margin-bottom: 20px;
     font-size: var(--font-size-l);
@@ -73,6 +88,8 @@ body {
     margin: 0 auto;
     padding: 40px 20px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    margin-bottom: 20px;
 }
 
 .partnership-intro h1 {
@@ -99,7 +116,7 @@ body {
     flex-wrap: wrap;
     gap: 30px;
     align-items: center;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.98);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -437,6 +454,8 @@ header .navbar {
     margin: 0 auto;
     padding: 40px 20px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    margin-bottom: 20px;
 }
 
 .team-intro h1 {
@@ -454,7 +473,7 @@ header .navbar {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.98);
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
