@@ -215,6 +215,28 @@ header {
     position: sticky;
 }
 
+footer {
+    background: rgba(172, 213, 145, 0.3);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #333;
+}
+
+footer p {
+    margin: 0;
+    font-size: var(--font-size-s);
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 header .navbar {
     display: flex;
     padding: 20px;
