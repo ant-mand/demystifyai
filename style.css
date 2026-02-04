@@ -152,6 +152,10 @@ body {
     line-height: 1.7;
 }
 
+.small-text {
+  font-size: 0.85rem;
+}
+
 /* RESPONSIVE FOR MOBILE */
 @media screen and (max-width: 768px) {
     .partner {
