@@ -13,13 +13,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const menu = document.querySelector('#mobile-menu');
             const menuLinks = document.querySelector('.nav-menu');
+            const backdrop = document.querySelector('#nav-backdrop');
             const dropdownLinks = document.querySelectorAll('.nav-item.dropdown > .nav-link');
             const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
 
+            function openMenu() {
+                menu.classList.add('is-active');
+                menuLinks.classList.add('active');
+                backdrop.classList.add('active');
+                document.body.classList.add('menu-open');
+            }
+            function closeMenu() {
+                menu.classList.remove('is-active');
+                menuLinks.classList.remove('active');
+                backdrop.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+
             menu.addEventListener('click', () => {
-                menu.classList.toggle('is-active');
-                menuLinks.classList.toggle('active');
+                menuLinks.classList.contains('active') ? closeMenu() : openMenu();
             });
+
+            backdrop.addEventListener('click', closeMenu);
 
             dropdownLinks.forEach(link => {
                 const parent = link.parentElement;
