@@ -808,3 +808,300 @@ body.menu-open {
 .navbar .nav-container .nav-menu .dropdown.open > .nav-link::after {
     transform: rotate(180deg);
 }
+
+/* Responsive 16:9 video box (used on the About page) */
+.video-embed{
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 30px;     /* centered, space below */
+    aspect-ratio: 16 / 9;    /* keeps the video shape on any screen */
+    border-radius: var(--border-radius-s);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-embed iframe {
+    position: absolute;
+    inset: 0;                   /* fill the box */
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Two subpage link-buttons at the bottom of the About page */
+.about-subpage-links {
+    display: flex;
+    flex-wrap: wrap;            /* stack on narrow screens */
+    gap: 16px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.section-link {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--secondary-color);
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: var(--border-radius-m);
+    font-weight: var(--font-weight-sb);
+    transition: opacity 0.2s ease;
+}
+
+.section-link:hover {
+    opacity: 0.85;
+}
+
+/* TEAM PAGE — grid */
+.team-grid-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.team-grid {
+    display: grid;
+    /* as many columns as fit, each ≥ 200px, sharing space evenly */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.team-card-photo {
+    width: 100%;
+    aspect-ratio: 1;            /* square */
+    object-fit: cover;         /* crop to fill, no stretching */
+    border-radius: var(--border-radius-s);
+    margin-bottom: 14px;
+}
+
+.team-card h3 {
+    font-size: var(--font-size-m);
+    margin-bottom: 4px;
+}
+
+.team-card-role {
+    font-size: var(--font-size-s);
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.team-card-linkedin img {
+    width: 24px;
+    height: auto;
+}
+
+/* placeholder cards */
+.team-card.placeholder .placeholder-photo {
+    background: repeating-linear-gradient(
+        45deg, #e9e9e9, #e9e9e9 10px, #f4f4f4 10px, #f4f4f4 20px);
+}
+.team-card.placeholder h3,
+.team-card.placeholder .team-card-role {
+    color: #aaa;
+}
+
+/* TEAM PAGE — horizontal strips */
+.team-strips {
+    width: 100%;                   /* needed: see note below */
+    max-width: 1000px;             /* match the .team-intro box so the edges line up */
+    margin: 0 auto;
+    padding: 0 0 40px;             /* no side padding → strips align with the intro box */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* Why `width: 100%`? `.team-strips` is a flex item (body is a column flexbox) AND
+   has `margin: 0 auto`. Auto margins on a flex item turn OFF stretching, so without
+   an explicit width the container shrinks to its content (narrower than the intro box
+   and misaligned). `width: 100%` makes it fill up to its max-width. */
+
+.team-strip {
+    position: relative;            /* anchor for the "stretched link" overlay */
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.team-strip:hover {
+    box-shadow: 0 10px 28px rgba(0,0,0,0.16);
+    transform: translateY(-2px);
+}
+
+.strip-photo {
+    width: 120px;
+    height: 150px;                 /* portrait shape — the source photos are tall (2:3),
+                                      so a portrait frame crops far less of the face */
+    object-fit: cover;
+    object-position: center top;   /* bias the crop toward the head/face, not the chest */
+    border-radius: 10px;           /* rounded rectangle (a circle would cut the face) */
+    flex-shrink: 0;
+}
+
+.strip-info {
+    flex: 1;
+}
+
+.strip-name {
+    font-family: 'Playfair Display', serif;   /* the professional font */
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.strip-link {
+    color: #222;
+    text-decoration: none;
+}
+
+/* THE STRETCHED-LINK TRICK: this invisible layer covers the whole strip,
+   so clicking anywhere on the strip follows the name's link. */
+.strip-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.strip-role {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: var(--font-size-s);
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.strip-bio {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+/* Social icons must sit ABOVE the stretched-link overlay so they're
+   clickable on their own (z-index raises them; position makes z-index work). */
+.strip-social {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 14px;
+}
+
+.strip-social a {
+    color: #555;
+    display: inline-flex;
+    transition: color 0.2s ease;
+}
+
+.strip-social a:hover {
+    color: var(--secondary-color);
+}
+
+/* Stack on small screens */
+@media screen and (max-width: 600px) {
+    .team-strip {
+        flex-direction: column;
+        text-align: center;
+    }
+    .strip-social {
+        justify-content: center;
+    }
+}
+
+/* PERSONAL PAGE — profile header (photo + name + role + icons) */
+.member-header {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;               /* stacks on narrow screens */
+    margin-bottom: 24px;
+}
+
+.member-photo {
+    width: 160px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;   /* keep the face, like the strips */
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.member-meta h1 {
+    margin-bottom: 4px;
+}
+
+.member-role {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: var(--font-size-s);
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.member-social {
+    display: flex;
+    gap: 14px;
+}
+
+/* CURRICULUM PAGE — "Learn More" accordion */
+.approaches {
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.approach-item {
+    border: 1px solid var(--medium-gray-color);
+    border-radius: var(--border-radius-s);
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.approach-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 16px 20px;
+    background: var(--primary-color);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-sb);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.approach-chevron {
+    transition: transform 0.3s ease;
+}
+
+.approach-item.open .approach-chevron {
+    transform: rotate(180deg);
+}
+
+.approach-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.approach-item.open .approach-body {
+    max-height: 400px;          /* larger than the content */
+}
+
+.approach-body p {
+    padding: 16px 20px;
+    line-height: 1.7;
+    margin: 0;
+}
