@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname.split('/');
     const depth = path.length - 2;
     const navbarPath = depth > 0 ? '../'.repeat(depth) + 'navbar.html' : 'navbar.html';
+    const footerPath = depth > 0 ? '../'.repeat(depth) + 'footer.html' : 'footer.html';
+    fetch(footerPath)
+        .then(res => res.ok ? res.text() : Promise.reject('Footer load failed: ' + res.status))
+        .then(html => {
+            const placeholder = document.getElementById('footer-placeholder');
+            if (placeholder) placeholder.innerHTML = html;
+        })
+        .catch(err => console.error(err));
 
     fetch(navbarPath)
         .then(res => {

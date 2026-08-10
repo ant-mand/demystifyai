@@ -63,10 +63,44 @@
                     <li><strong>Information and Learning Tools:</strong> Use in brainstorming. AI writing assistants. AI tutoring. Accessibility features (image description, closed captioning). Agentic AI and use in daily workflows and searches</li>
                     <li><strong>Hands-On Workshop:</strong> Experiment with tools. Discussion of benefits and limitations. How could these tools help your family or community organization? What concerns do you have about using AI tools?</li>
                 </ul>
+                <h2>Learn More: How We Deliver</h2>
+                <p>We reach community members through two complementary models. Click each to expand.</p>
+
+                <div class="approaches">
+                    <div class="approach-item">
+                        <button class="approach-toggle" type="button">
+                            Train-the-Trainer
+                            <span class="approach-chevron">▾</span>
+                        </button>
+                        <div class="approach-body">
+                            <p><strong>Nonprofit Co-Creation:</strong> Partnering with digital inclusion
+                            organizations to reach their constituencies, including multilingual and
+                            underrepresented populations. Partners adapt the curriculum for community-specific
+                            needs (e.g., language translation, local platform examples) and integrate it into
+                            existing programs, with our support.</p>
+                        </div>
+                    </div>
+
+                    <div class="approach-item">
+                        <button class="approach-toggle" type="button">
+                            Direct Delivery
+                            <span class="approach-chevron">▾</span>
+                        </button>
+                        <div class="approach-body">
+                            <p>Direct content delivery to different community members who we can reach and/or
+                            who may not be reached by existing organizations.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
-        <footer>
-            <p>Yutong Liu & Digit / <a href="https://betterimagesofai.org" target="_blank" rel="noopener noreferrer">https://betterimagesofai.org</a> / <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">https://creativecommons.org/licenses/by/4.0/</a></p>
-        </footer>
+        <div id="footer-placeholder"></div>
+        <script>
+            document.querySelectorAll('.approach-toggle').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btn.closest('.approach-item').classList.toggle('open');
+                });
+            });
+        </script>
     </body>
 </html>
