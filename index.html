@@ -10,6 +10,7 @@
      </head>
 
     <body>
+        <script src="script.js" defer></script>
         <div class="header-container">
             <header>
                 <a href="/"> 
@@ -30,6 +31,21 @@
             </header>
         </div>
 
+        <div class="slider-container">
+            <div class="image-slider">
+                <img id="img-1" src="assets/workshops/cha1.jpg" alt="DemystifyAI at workshop with CHA instructors, img 1"/>
+                <img id="img-2" src="assets/workshops/cbcac1.JPG" alt="DemystifyAI at workshop with CBCAC and Project Vision, img 1"/>
+                <img id="img-3" src="assets/workshops/cha2.jpg" alt="DemystifyAI at workshop with CHA instructors, img 2"/>
+                <img id="img-4" src="assets/workshops/cbcac2.jpg" alt="DemystifyAI at workshop with CBCAC and Project Vision, img 2"/>
+            </div>
+
+            <div class="slider-nav">
+                <span class="dot active" onclick="changeSlide(0)"></span>
+                <span class="dot" onclick="changeSlide(1)"></span>
+                <span class="dot" onclick="changeSlide(2)"></span>
+                <span class="dot" onclick="changeSlide(3)"></span>
+            </div>
+        </div>
 
         <div class="footer-container">
             <footer>
