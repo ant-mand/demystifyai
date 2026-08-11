@@ -1,87 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+
+<html lang="en-US">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DemystifyAI Chicago | Home</title>
-        <link rel="stylesheet" href="../style.css">
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>DemystifyAI</title>
+        <link rel="icon" type="image/x-icon" href="assets/logos/icon.jpg">
+        <link rel="stylesheet" href="styles.css" fetchpriority="high">
      </head>
 
-    <body class="home">
-        <header id="navbar-placeholder"></header>
-        <script src="../app.js"></script>
-        <main class="main-content">
-            <div class="about-box">
-                <p><strong>DemystifyAI Chicago is a student-led, grassroots initiative that aims to make artificial intelligence (AI) more accessible to the everyday community member. Our mission is to equip Chicago community members with practical AI and digital literacy skills, empowering individuals to confidently participate in our AI-integrated society while protecting themselves from AI risks. We are members of the Chicago Digital Equity Coalition and have received a generous grant from UChicago to conduct this work.</strong></p>
-                <p> We strive to:
-                    <ul>
-                        <li> Provide nonprofits with ready-to-use AI curriculum</li>
-                        <li> Collaborate with nonprofits to co-create and integrate AI literacy resources into digital inclusion curriculum</li>
-                        <li> Empower individuals to engage responsibly with an AI-driven society </li>
-                    </ul>
-                </p>
-                <p> Our modules include:
-                    <ul>
-                        <li> AI Foundations</li>
-                        <li> Protecting Yourself When Engaging with AI</li>
-                        <li> AI as a Tool - Practical Applications for Community Benefit </li>
-                    </ul>
-                </p>
-            </div>
-            <section class="curriculum-preview">
-                <h2>Our Curriculum</h2>
-                <p class="section-sub">Three practical modules that build everyday AI literacy.</p>
+    <body>
+        <div class="header-container">
+            <header>
+                <a href="/"> 
+                    <img src= "assets/logos/logo.png" alt="DemystifyAI home" /> 
+                </a>
+                <nav>
+                    <ul class="navbar-items">
+                        <li><a href= "pages/about.html" class="nav-item">About Us</a></li>
+                        <li><a href= "pages/partnerships.html" class="nav-item">Our Model</a></li>
 
-                <div class="curriculum-cards">
-                    <!-- CARD 1 -->
-                    <div class="curriculum-card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <h3>AI Foundations</h3>
-                            </div>
-                            <div class="card-back">
-                                <p>Understand what AI actually is (and isn't), spot it in daily life, and separate myths from reality.</p>
-                                <a href="/pages/curriculum.html">Learn more →</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- CARD 2 -->
-                    <div class="curriculum-card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <h3>Protecting Yourself and Engaging with AI</h3>
-                            </div>
-                            <div class="card-back">
-                                <p>Recognize AI scams and deepfakes, manage your privacy, and understand how algorithms affect you.</p>
-                                <a href="/pages/curriculum.html">Learn more →</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- CARD 3 -->
-                    <div class="curriculum-card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <h3>AI as a Tool—Practical Applications for Community Benefit</h3>
-                            </div>
-                            <div class="card-back">
-                                <p>Use AI tools responsibly and hands-on for personal and community benefit.</p>
-                                <a href="/pages/curriculum.html">Learn more →</a>
-                            </div>
-                        </div>
-                    </div>
+                        <!-- V2 UPDATE: ADD CURRICULUM TO NAVIGATION BAR FOR OPEN-SOURCING -->
+                        <!-- <li><a href= #curiculum">Our Curriculum</a></li>  -->
+
+                        <li><a href= "pages/partnerships.html" class="nav-item">Our Impact</a></li>
+                        <li><a href= "pages/contact.html" class="nav-item">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+
+        <div class="footer-container">
+            <footer>
+                <div class="footer-logo-tagline-social">
+                    <a href="/">
+                        <img class="footer-logo" src= "assets/logos/logo.png" alt="DemystifyAI home" /> 
+                    </a>
+                    <p class="footer-tagline"> Bridging the AI Divide. </p>
+                    <a class="footer-social" href="https://www.linkedin.com/company/demystifyaichicago/" aria-label="DemystifyAI's LinkedIn">
+                        <svg class="social-pic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+                        </svg>
+                    </a>
                 </div>
-
-                <a href="/pages/curriculum.html" class="curriculum-btn">See the full curriculum →</a>
-            </section>
-        </main>
-        <div id="footer-placeholder"></div>
-        <script>
-            // Only on touch devices (no hover): tap a card to flip it.
-            if (window.matchMedia('(hover: none)').matches) {
-                document.querySelectorAll('.curriculum-card').forEach(card => {
-                    card.addEventListener('click', () => card.classList.toggle('flipped'));
-                });
-            }
-        </script>
+                <nav aria-label="footer">
+                    <ul>
+                        <li><a href= "pages/about.html">About Us</a></li>
+                        <li><a href= "pages/partnerships.html">Our Model</a></li>
+                        <!-- add code for V2 update here -->
+                        <li><a href= "pages/partnerships.html">Our Impact</a></li>
+                        <li><a href= "pages/contact.html">Contact Us</a></li> 
+                    </ul>
+                </nav>
+                <p>&copy; 2025-2026. DemystifyAI is a Chicago-based grassroots initiative working towards nonprofit status. </p>
+            </footer>
+        </div>
     </body>
 </html>
+        
