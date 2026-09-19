@@ -1,87 +1,159 @@
-<!doctype html>
-
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset = "utf-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <title>DemystifyAI</title>
-        <link rel="icon" type="image/x-icon" href="assets/logos/icon.jpg">
-        <link rel="stylesheet" href="styles.css" fetchpriority="high">
-     </head>
-
-    <body>
+        <meta name = "author" content = "DemystifyAI">
+        <meta name= "description" content = "DemystifyAI offers AI and Digital Literacy curriculum and resources for adult learners, especially those with low-mid digital skills. They are Chicago-based and partner with community organizations to organize and co-deliver workshops.">
+        <title>DemystifyAI - Bridging the AI Divide</title>
+        <link rel="stylesheet" href="styles.css">
         <script src="script.js" defer></script>
-        <div class="header-container">
-            <header>
-                <a href="/"> 
-                    <img src= "assets/logos/logo.png" alt="DemystifyAI home" /> 
+    </head>
+
+    <body data-root="">
+        <header id="site-header">
+            <nav class="nav-bar" aria-label="Main">
+                <a href="index.html" class="logo">
+                    <img src="assets/logos/logo.png" alt="DemystifyAI Home">
                 </a>
-                <nav>
-                    <ul class="navbar-items">
-                        <li><a href= "pages/about.html" class="nav-item">About Us</a></li>
-                        <li><a href= "pages/partnerships.html" class="nav-item">Our Model</a></li>
 
-                        <!-- V2 UPDATE: ADD CURRICULUM TO NAVIGATION BAR FOR OPEN-SOURCING -->
-                        <!-- <li><a href= #curiculum">Our Curriculum</a></li>  -->
+                <ul class="nav-links">
+                    <li>
+                        <a href="pages/about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="pages/model.html">Our Model</a>
+                    </li>
+                    <li>
+                        <a href="pages/curriculum.html">Curriculum</a>
+                    </li>
+                    <li>
+                        <a href="pages/impact.html">Our Impact</a>
+                    </li>
+                    <li>
+                        <a href="pages/contact.html">Contact Us</a>
+                    </li>
+                </ul>
 
-                        <li><a href= "pages/partnerships.html" class="nav-item">Our Impact</a></li>
-                        <li><a href= "pages/contact.html" class="nav-item">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
+            </nav>
 
-        <div class="slider-container">
-            <div class="image-slider">
-                <img id="img-1" src="assets/workshops/cha1.jpg" alt="DemystifyAI at workshop with CHA instructors, img 1"/>
-                <img id="img-2" src="assets/workshops/cbcac1.JPG" alt="DemystifyAI at workshop with CBCAC and Project Vision, img 1"/>
-                <img id="img-3" src="assets/workshops/cha2.jpg" alt="DemystifyAI at workshop with CHA instructors, img 2"/>
-                <img id="img-4" src="assets/workshops/cbcac2.jpg" alt="DemystifyAI at workshop with CBCAC and Project Vision, img 2"/>
-            </div>
+        </header>
 
-            <div class="slider-nav">
-                <span class="dot active" onclick="changeSlide(0)"></span>
-                <span class="dot" onclick="changeSlide(1)"></span>
-                <span class="dot" onclick="changeSlide(2)"></span>
-                <span class="dot" onclick="changeSlide(3)"></span>
-            </div>
-        </div>
-
-        <div class="mission-container">
-            <h2> What We Do </h2>
-            <p> 
-                # add this as a banner above the slider # 
-                DemystifyAI is a student-led, grassroots initiative that aims to make artificial intelligence (AI) more accessible to the everyday community member. 
-                Our mission is to equip Chicago community members with practical AI and digital literacy skills, empowering them to confidently participate in our AI-integrated society while protecting themselves from AI risks. 
-                We are members of the Chicago Digital Equity Coalition and have received a generous grant from UChicago to conduct this work.
-            </p>
-        </div>
-
-        <div class="footer-container">
-            <footer>
-                <div class="footer-logo-tagline-social">
-                    <a href="/">
-                        <img class="footer-logo" src= "assets/logos/logo.png" alt="DemystifyAI home" /> 
-                    </a>
-                    <p class="footer-tagline"> Bridging the AI Divide. </p>
-                    <a class="footer-social" href="https://www.linkedin.com/company/demystifyaichicago/" aria-label="DemystifyAI's LinkedIn">
-                        <svg class="social-pic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
-                        </svg>
-                    </a>
+        <main>
+            <section class="hero">
+                <div class="hero-track">
+                    <img src="assets/workshops/cbcac1.JPG" alt="DemystifyAI workshop with Coalition For A Better Chinese American Community, Image 1">
+                    <img src="assets/workshops/cbcac2.JPG" alt="DemystifyAI workshop with Coalition For A Better Chinese American Community, Image 2">
+                    <img src="assets/workshops/cha1.JPG" alt="DemystifyAI workshop with Chicago Housing Authority, Image 1">
+                    <img src="assets/workshops/cha2.JPG" alt="DemystifyAI workshop with Chicago Housing Authority, Image 2">                
                 </div>
-                <nav aria-label="footer">
-                    <ul>
-                        <li><a href= "pages/about.html">About Us</a></li>
-                        <li><a href= "pages/partnerships.html">Our Model</a></li>
-                        <!-- add code for V2 update here -->
-                        <li><a href= "pages/partnerships.html">Our Impact</a></li>
-                        <li><a href= "pages/contact.html">Contact Us</a></li> 
+
+                <button type="button" class="hero-arrow prev" aria-label="Previous photo">&#8249;</button>
+                <button type="button" class="hero-arrow next" aria-label="Next photo">&#8250;</button>
+
+                <div class="hero-content">
+                    <h1>Bridging the AI & Digital Divide</h1>
+                    <p>Practical AI and digital literacy skills for every community.</p>
+                    <div class="hero-buttons">
+                        <a href="pages/contact.html" class="btn btn-contact">Bring us to your organization</a>
+                        <a href="pages/curriculum.html" class="btn btn-curriculum">Use our curriculum</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="stats">
+                <ul class="stats-list">
+                    <li><span class="stat-highlight">Since 2025</span> across Chicago</li>
+                    <li><span class="stat-highlight">Free</span> and open-source</li>
+                </ul>
+
+            </section>
+
+            <section class="section">
+                <h2 id="what-we-do">What We Do</h2>
+                <p>DemystifyAI is a student-led, grassroots initiative that aims to make artificial intelligence more accessible to the everyday community member. Our mission is to equip Chicago community members with practical AI and digital literacy skills, empowering them to confidently participate in our AI-integrated society while protecting themselves from AI risks.</p>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Our Model</h3>
+                        <p>How we partner with community orgs to run workshops.</p>
+                        <a href="pages/model.html">Read more <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Our Curriculum</h3>
+                        <p>Open-source lesson plans, slides, and instructor guides.</p>
+                        <a href="pages/curriculum.html">Browse <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Our Impact</h3>
+                        <p>Case studies from the sessions we've run.</p>
+                        <a href="pages/impact.html">See stories <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                </div>
+
+            </section>
+
+            <section class="section section-alt" aria-labelledby="partners">
+                <h2 id="partners">Our Partner Organizations</h2>
+                <ul class="partner-list">
+                    <li>Chicago Housing Authority</li>
+                    <li>CBCAC & Project Vision</li>
+                    <li>PODER</li>
+                    <li>Trellus</li>
+                    <li class="partner-more" aria-hidden="true" hidden>and more</li>
+                </ul>
+
+            </section>
+
+            <section class="section" aria-labelledby="workshop">
+                <h2 id="workshop">What a workshop looks like</h2>
+                <ol class="steps">
+                    <li>
+                        <span class="step-num" aria-hidden="true">01</span>
+                        <h3>We meet the org</h3>
+                        <p>Shape the session around what their community actually needs.</p>
+                    </li>
+                    <li>
+                        <span class="step-num" aria-hidden="true">02</span>
+                        <h3>We teach it together</h3>
+                        <p>Hands-on, in their space, no jargon.</p>
+                    </li>
+                    <li>
+                        <span class="step-num" aria-hidden="true">03</span>
+                        <h3>They keep the materials</h3>
+                        <p>Everything is open-source and theirs to reuse.</p>
+                    </li>
+                </ol>
+
+            </section>
+        </main>
+
+        <footer id="site-footer" class="site-footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logos/logo.png" alt="DemystifyAI Home">
+                    </a>
+                    <p class="footer-tagline">Bridging the AI & Digital Divide.</p>
+                    <a href="https://www.linkedin.com/company/demystifyaichicago/" class="footer-social" aria-label="DemystifyAI on LinkedIn">in</a>
+                </div>
+
+                <nav aria-label="Footer">
+                    <ul class="footer-links">
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/model.html">Our Model</a></li>
+                        <li><a href="pages/curriculum.html">Curriculum</a></li>
+                        <li><a href="pages/impact.html">Our Impact</a></li>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
-                <p>&copy; 2025-2026. DemystifyAI is a Chicago-based grassroots initiative working towards nonprofit status. </p>
-            </footer>
-        </div>
+            </div>
+
+            <p class="footer-copy">&copy; 2025–2026. DemystifyAI is a Chicago-based grassroots initiative working towards nonprofit status.</p>
+        </footer>
+
     </body>
 </html>
-        
