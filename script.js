@@ -18,7 +18,7 @@ if (siteHeader) {
     siteHeader.innerHTML = `
         <nav class="nav-bar" aria-label="Main">
             <a href="${root}index.html" class="logo">
-                <img src="${root}assets/logos/logo.png" alt="DemystifyAI Home">
+                <img src="${root}assets/DemystifyAI-logo.png" alt="DemystifyAI Home">
             </a>
             <ul class="nav-links">${navLinks}</ul>
         </nav>`;
@@ -37,7 +37,7 @@ if (siteFooter) {
         <div class="footer-top">
             <div class="footer-brand">
                 <a href="${root}index.html" class="footer-logo">
-                    <img src="${root}assets/logos/logo.png" alt="DemystifyAI Home">
+                    <img src="${root}assets/DemystifyAI-logo.png" alt="DemystifyAI Home">
                 </a>
                 <p class="footer-tagline">Bridging the AI &amp; Digital Divide.</p>
                 <a href="https://www.linkedin.com/company/demystifyaichicago/" class="footer-social" aria-label="DemystifyAI on LinkedIn">in</a>
@@ -79,33 +79,4 @@ if (track) {
     } else if (!reduceMotion) {
         startTimer();
     }
-}
-
-const partnerList = document.querySelector('.partner-list');
-
-// show "and more" for partners list on home page
-
-if (partnerList) {
-    const partners = [...partnerList.querySelectorAll('li:not(.partner-more)')];
-    const more = partnerList.querySelector('.partner-more');
-
-    function fitPartners() {
-        // reset: show everything, hide "and more"
-        partners.forEach(li => li.classList.remove('is-overflow'));
-        more.hidden = true;
-
-        const firstRow = partners[0].offsetTop;
-        const lastPartner = partners[partners.length - 1];
-        if (lastPartner.offsetTop === firstRow) return;   // all fit on one line
-
-        // otherwise, show "and more" and hide names from the end until it fits
-        more.hidden = false;
-        for (let i = partners.length - 1; i > 0 && more.offsetTop > firstRow; i--) {
-            partners[i].classList.add('is-overflow');
-        }
-    }
-
-    fitPartners();
-    window.addEventListener('resize', fitPartners);
-    document.fonts.ready.then(fitPartners);
 }

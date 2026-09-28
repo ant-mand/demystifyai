@@ -38,6 +38,10 @@ body {
     color: #1c1c1c;
 }
 
+.section > p.wide {
+    max-width: none;
+}
+
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -282,29 +286,33 @@ body {
 }
 
 .partner-list li {
-    padding: 8px 14px;
+    display: flex;
+}
+
+.partner-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    min-width: 120px;
+    padding: 12px 20px;
     border: 1px dotted #4A7A48;
-    border-radius: 3px;
+    border-radius: 4px;
     background: #fff;
-    font-size: 0.95rem;
-    white-space: nowrap;
+    transition: border-color 0.2s, transform 0.2s;
 }
 
-.partner-list .is-overflow {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap; 
+.partner-list a:hover {
+    border-color: #38299C;
+    transform: translateY(-2px);
 }
 
-.partner-list .partner-more {
-    border-style: dashed;
-    color: #555;
+.partner-list img {
+    display: block;
+    max-width: 140px;
+    max-height: 48px;
+    width: auto;
+    height: auto;
 }
 
 .steps {
