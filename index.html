@@ -1,36 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DemystifyAI Chicago | Home</title>
-        <link rel="stylesheet" href="style.css">
-     </head>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta name = "author" content = "DemystifyAI">
+        <meta name= "description" content = "DemystifyAI offers AI and Digital literacy curriculum and resources for adult learners, especially those with low-mid digital skills. They are Chicago-based and partner with community organizations to organize and co-deliver workshops.">
+        <title>DemystifyAI - Home</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
 
-    <body class="home">
-        <header id="navbar-placeholder"></header>
-        <script src="app.js"></script>
-        <main class="main-content">
-            <div class="about-box">
-                <p><strong>DemystifyAI Chicago is a student-led, grassroots initiative that aims to make artificial intelligence (AI) more accessible to the everyday community member. Our mission is to equip Chicago community members with practical AI and digital literacy skills, empowering individuals to confidently participate in our AI-integrated society while protecting themselves from AI risks. We are members of the Chicago Digital Equity Coalition and have received a generous grant from UChicago to conduct this work.</strong></p>
-                <p> We strive to:
-                    <ul>
-                        <li> Provide nonprofits with ready-to-use AI curriculum</li>
-                        <li> Collaborate with nonprofits to co-create and integrate AI literacy resources into digital inclusion curriculum</li>
-                        <li> Empower individuals to engage responsibly with an AI-driven society </li>
-                    </ul>
+    <body data-root="">
+        <header id="site-header">
+            <nav class="nav-bar" aria-label="Main">
+                <a href="index.html" class="logo">
+                    <img src="assets/DemystifyAI-logo.png" alt="DemystifyAI Home">
+                </a>
+
+                <ul class="nav-links">
+                    <li>
+                        <a href="pages/about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="pages/model.html">Our Model</a>
+                    </li>
+                    <li>
+                        <a href="pages/curriculum.html">Curriculum</a>
+                    </li>
+                    <li>
+                        <a href="pages/impact.html">Our Impact</a>
+                    </li>
+                    <li>
+                        <a href="pages/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-track">
+                    <img src="assets/workshops/cbcac1.JPG" alt="DemystifyAI workshop with Coalition For A Better Chinese American Community, Image 1">
+                    <img src="assets/workshops/cbcac2.JPG" alt="DemystifyAI workshop with Coalition For A Better Chinese American Community, Image 2">
+                    <img src="assets/workshops/cha1.JPG" alt="DemystifyAI workshop with Chicago Housing Authority, Image 1">
+                    <img src="assets/workshops/cha2.JPG" alt="DemystifyAI workshop with Chicago Housing Authority, Image 2">                
+                </div>
+
+                <button type="button" class="hero-arrow prev" aria-label="Previous photo">&#8249;</button>
+                <button type="button" class="hero-arrow next" aria-label="Next photo">&#8250;</button>
+
+                <div class="hero-content">
+                    <h1>Bridging the AI & Digital Divide</h1>
+                    <p>Practical AI and digital literacy skills for every community.</p>
+                    <div class="hero-buttons">
+                        <a href="pages/contact.html" class="btn btn-contact">Bring us to your organization</a>
+                        <a href="pages/curriculum.html" class="btn btn-curriculum">Use our curriculum</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="stats">
+                <ul class="stats-list">
+                    <li><span class="stat-highlight">Since 2025</span> across Chicago</li>
+                    <li><span class="stat-highlight">Free</span> and open-source</li>
+                </ul>
+
+            </section>
+
+            <section class="section">
+                <h2 id="intro">AI literacy is Digital literacy</h2>
+                <p class="wide">
+                    DemystifyAI is a grassroots Artificial Intelligence (AI) and Digital literacy initiative based in Chicago. We aim to make AI more accessible to the everyday community member. Our mission is to empower communities with the knowledge and skills to engage safely and confidently with today's digital society. We create curriculum for adult learners.
                 </p>
-                <p> Our modules include:
-                    <ul>
-                        <li> AI Foundations</li>
-                        <li> Protecting Yourself When Engaging with AI</li>
-                        <li> AI as a Tool - Practical Applications for Community Benefit </li>
-                    </ul>
+                <p class="wide">
+                    We partner with community/non-profit organizations to deliver workshops tailored to their individual communities and develop curriculum/resources that integrate into their existing digital inclusion offerings. Although each community is different, and may differ in how it relates to AI, we hope our resources can empower learners of all backgrounds.
+                </p> 
+                <p class="wide">
+                    <strong>DemystifyAI is committed to open-sourcing our work. </strong> 
+                    You may access some of our open-sourced resources through the <a href="pages/Curriculum.html" underline="none">Curriculum</a> tab on this website.
                 </p>
-            </div>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Our Model</h3>
+                        <p>How we partner with community organizations to host workshops/classes</p>
+                        <a href="pages/model.html">Read more <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Our Curriculum</h3>
+                        <p>Open-sourced lesson plans, slides, and instructor guides</p>
+                        <a href="pages/curriculum.html">Browse <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Our Impact</h3>
+                        <p>Our work to date and case studies from the workshops we've delivered</p>
+                        <a href="pages/impact.html">See stories <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                </div>
+
+            </section>
+
+            <section class="section section-alt" aria-labelledby="partners">
+                <h2 id="partners">Our Partner Organizations</h2>
+                <ul class="partner-list">
+                    <li>
+                        <a href="https://www.thecha.org/">
+                            <img src="assets/partners/cha-logo.svg" alt="Chicago Housing Authority">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.cbcacchicago.org/">
+                            <img src="assets/partners/CBCAC-logo.webp" alt="Coalition For A Better Chinese American Community">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://mytrellus.org/">
+                            <img src="assets/partners/trellus-logo.png" alt="Trellus">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.poderworks.org/">
+                            <img src="assets/partners/poder.webp" alt="PODER">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://digitalleadersnow.org/">
+                            <img src="assets/partners/dln-logo.png" alt="Digital Leaders Now">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.chipublib.org/">
+                            <img src="assets/partners/cpl-logo.png" alt="Chicago Public Library">
+                        </a>
+                    </li>
+                </ul>
+
+            </section>
+
+            <section class="section" aria-labelledby="workshop">
+                <h2 id="workshop">How We Work</h2>
+                <ol class="steps">
+                    <li>
+                        <span class="step-num" aria-hidden="true">01</span>
+                        <h3>Meet with Organization</h3>
+                        <p>
+                            Assess the digital literacy needs of their community members and the organization’s digital infrastructure. Then, create a plan together for how DemystifyAI can support your goals.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="step-num" aria-hidden="true">02</span>
+                        <h3>Co-design and Co-deliver</h3>
+                        <p>
+                            Regular meetings with the organization as we create relevant workshop/class materials. We will support you in delivering the resources and measuring outcomes.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="step-num" aria-hidden="true">03</span>
+                        <h3>Debrief and Re-iterate</h3>
+                        <p>
+                            Together, we will review how the workshop went/was received and what we could improve for next time. DemystifyAI is committed to open-sourcing our work, so we are happy to have you re-use what we build together - please let us know if you do!
+                        </p>
+                    </li>
+                </ol>
+
+            </section>
         </main>
-        <footer>
-            <p>Yutong Liu & Digit / <a href="https://betterimagesofai.org" target="_blank" rel="noopener noreferrer">https://betterimagesofai.org</a> / <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">https://creativecommons.org/licenses/by/4.0/</a></p>
+
+        <footer id="site-footer" class="site-footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/DemystifyAI-logo.png" alt="DemystifyAI Home">
+                    </a>
+                    <p class="footer-tagline">Bridging the AI & Digital Divide.</p>
+                    <a href="https://www.linkedin.com/company/demystifyaichicago/" class="footer-social" aria-label="DemystifyAI on LinkedIn">in</a>
+                </div>
+
+                <nav aria-label="Footer">
+                    <ul class="footer-links">
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/model.html">Our Model</a></li>
+                        <li><a href="pages/curriculum.html">Curriculum</a></li>
+                        <li><a href="pages/impact.html">Our Impact</a></li>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <p class="footer-copy">&copy; 2025–2026. DemystifyAI is a Chicago-based grassroots initiative working towards nonprofit status.</p>
         </footer>
+
     </body>
 </html>
