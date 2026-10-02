@@ -579,7 +579,8 @@ body {
 }
 
 @media (max-width: 760px) {
-    .story { grid-template-columns: 1fr; }
+    .story,
+    .contact-layout { grid-template-columns: 1fr; }
 }
 
 .form-embed iframe {
@@ -648,3 +649,27 @@ body {
     gap: 8px;
     text-decoration: none;
 }
+
+/* curriculum page */
+
+.coming-soon {
+    max-width: 36rem;
+    margin: 0 auto;
+    padding: 40px 32px;
+    border: 2px dashed #4A7A48;
+    border-radius: 6px;
+    background: #fff9f0;
+    text-align: center;
+}
+
+.section .coming-soon h2 {
+    margin: 0 0 12px;
+}
+
+.coming-soon p {
+    margin: 0 0 20px;
+    line-height: 1.6;
+    color: #1c1c1c;
+}
+
+/* model page */
