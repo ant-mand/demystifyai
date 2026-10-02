@@ -16,7 +16,7 @@ body {
 }
 
 .section {
-    padding: 32px 24px;
+    padding: 32px max(24px, calc((100% - 1100px) / 2));
     border-top: 1px dashed #bbb;
     background: #fff;
 }
@@ -40,6 +40,16 @@ body {
 
 .section > p.wide {
     max-width: none;
+}
+
+.section > p + p {
+    margin-top: 16px;
+}
+
+.section p a {
+    color: #38299C;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
 .nav-bar {
@@ -429,14 +439,14 @@ body {
 /* about us page */
 
 .section.page-intro {
-    padding: 40px 24px 28px;
+    padding: 32px max(24px, calc((100% - 1100px) / 2));
     background: #fff;
     border-top: none;
 }
 
 .page-intro h1 {
     margin: 0 0 8px;
-    font-size: clamp(2.25rem, 5vw, 3rem); ;
+    font-size: clamp(2.25rem, 5vw, 3rem);
     font-weight: 400;
     line-height: 1.1;
 }
@@ -457,27 +467,15 @@ body {
 
 .story {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 32px;
     align-items: start;
 }
 
-.story img {
-    box-shadow: 14px 14px 0 #4A7A48;
-}
-
 .story-text p {
-    margin: 0 0 12px;
+    margin: 0 0 16px;
     line-height: 1.6;
     color: #1c1c1c;
-}
-
-.story img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    border-radius: 4px;
 }
 
 .section.team-section {
@@ -498,7 +496,7 @@ body {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 24px;
     margin: 16px 0 0;
     padding: 0;
@@ -509,6 +507,7 @@ body {
     display: block;
     width: 100%;
     aspect-ratio: 1;
+    object-fit: cover;
     border-radius: 4px;
     margin-bottom: 10px;
 }
@@ -548,6 +547,10 @@ body {
     color: #fff;
 }
 
+.section.cta-banner p a {
+    color: #fff;
+}
+
 .btn-light {
     background: #fff9f0;
     border-color: #fff9f0;
@@ -576,7 +579,7 @@ body {
 }
 
 @media (max-width: 760px) {
-    .contact-layout { grid-template-columns: 1fr; }
+    .story { grid-template-columns: 1fr; }
 }
 
 .form-embed iframe {
