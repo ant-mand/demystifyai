@@ -54,7 +54,8 @@ if (siteFooter) {
 const track = document.querySelector('.hero-track');
 
 if (track) {
-    const slides = track ? track.querySelectorAll('img') : [];const prevBtn = document.querySelector('.hero-arrow.prev');
+    const slides = track.querySelectorAll('img');
+    const prevBtn = document.querySelector('.hero-arrow.prev');
     const nextBtn = document.querySelector('.hero-arrow.next');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let current = 0;
@@ -79,4 +80,55 @@ if (track) {
     } else if (!reduceMotion) {
         startTimer();
     }
+}
+
+// ---------- curriculum page ----------
+// The embedded Google Slides deck and the PDF viewers handle their own paging,
+// so this is just the tabs and the request dialog.
+
+document.querySelectorAll('.package').forEach(pkg => {
+    const tabs = [...pkg.querySelectorAll('[role="tab"]')];
+    if (!tabs.length) return;
+
+    function selectTab(tab) {
+        tabs.forEach(t => {
+            const on = t === tab;
+            t.setAttribute('aria-selected', on);
+            t.tabIndex = on ? 0 : -1;
+            document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+        });
+    }
+
+    tabs.forEach((tab, i) => {
+        tab.addEventListener('click', () => selectTab(tab));
+
+        // left/right arrows move between tabs, Home/End jump to the ends
+        tab.addEventListener('keydown', e => {
+            let next = null;
+            if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+            if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+            if (e.key === 'Home') next = tabs[0];
+            if (e.key === 'End') next = tabs[tabs.length - 1];
+            if (!next) return;
+            e.preventDefault();
+            selectTab(next);
+            next.focus();
+        });
+    });
+});
+
+// ---------- request dialog ----------
+
+const requestDialog = document.getElementById('request-dialog');
+
+if (requestDialog) {
+    document.addEventListener('click', e => {
+        if (e.target.closest('[data-request]')) requestDialog.showModal();
+        if (e.target.closest('[data-close]')) requestDialog.close();
+    });
+
+    // clicking the dark area outside the box closes it
+    requestDialog.addEventListener('click', e => {
+        if (e.target === requestDialog) requestDialog.close();
+    });
 }

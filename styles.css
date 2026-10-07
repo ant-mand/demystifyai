@@ -234,13 +234,6 @@ body {
     color: #4a7a48;
 }
 
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-    margin-top: 24px;
-}
-
 .card {
     padding: 20px;
     border: none;
@@ -650,7 +643,7 @@ body {
     text-decoration: none;
 }
 
-/* curriculum page */
+/* coming soon */
 
 .coming-soon {
     max-width: 36rem;
@@ -724,4 +717,395 @@ body {
  
 .modules li {
     margin-bottom: 4px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+button.btn,
+.link-button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.link-button {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #38299C;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.link-button:hover {
+    text-decoration-style: dotted;
+}
+
+.lock {
+    display: inline-block;
+    width: 13px;
+    height: 15px;
+    flex: none;
+    vertical-align: -2px;
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 15'%3E%3Cpath d='M3 6V4a3.5 3.5 0 0 1 7 0v2h.5A1.5 1.5 0 0 1 12 7.5v5A1.5 1.5 0 0 1 10.5 14h-8A1.5 1.5 0 0 1 1 12.5v-5A1.5 1.5 0 0 1 2.5 6H3Zm1.6 0h3.8V4a1.9 1.9 0 0 0-3.8 0v2Z'/%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 15'%3E%3Cpath d='M3 6V4a3.5 3.5 0 0 1 7 0v2h.5A1.5 1.5 0 0 1 12 7.5v5A1.5 1.5 0 0 1 10.5 14h-8A1.5 1.5 0 0 1 1 12.5v-5A1.5 1.5 0 0 1 2.5 6H3Zm1.6 0h3.8V4a1.9 1.9 0 0 0-3.8 0v2Z'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.lock-lg {
+    width: 26px;
+    height: 30px;
+    vertical-align: 0;
+    margin-bottom: 10px;
+}
+
+.package {
+    margin-top: 24px;
+    border: 1.5px solid #38299C;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.package-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px;
+}
+
+.package-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.package-meta li {
+    padding: 3px 12px;
+    border: 1px solid #8a8a8a;
+    border-radius: 999px;
+    color: #1c1c1c;
+    font-size: 0.85rem;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 0 24px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabs [role="tab"] {
+    padding: 12px 14px;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    background: none;
+    color: #555;
+    font: inherit;
+    cursor: pointer;
+}
+
+.tabs [role="tab"]:hover {
+    color: #38299C;
+}
+
+.tabs [role="tab"][aria-selected="true"] {
+    border-bottom-color: #38299C;
+    color: #38299C;
+    font-weight: 600;
+}
+
+.tabs [role="tab"]:focus-visible {
+    outline: 3px solid #38299C;
+    outline-offset: -3px;
+}
+
+.tag {
+    margin-left: 4px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #ecf2eb;
+    color: #4A7A48;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.panel {
+    padding: 24px;
+}
+
+.panel:focus-visible {
+    outline: 3px solid #38299C;
+    outline-offset: -3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.locked-block {
+    padding: 36px 24px;
+    border: 2px dashed #38299C;
+    border-radius: 6px;
+    background: #fff9f0;
+    color: #38299C;
+    text-align: center;
+}
+
+.locked-block h3 {
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.locked-block p {
+    max-width: 34rem;
+    margin: 0 auto 20px;
+    color: #1c1c1c;
+    line-height: 1.6;
+}
+
+.material-list {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.material-list li {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 16px 20px;
+    border: 1.5px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    color: #38299C;
+}
+
+.material-list li > div {
+    flex: 1 1 14rem;
+}
+
+.material-list h3 {
+    margin: 0;
+    color: #1c1c1c;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.material-list p {
+    margin: 2px 0 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.request-dialog {
+    width: min(32rem, calc(100% - 32px));
+    padding: 28px;
+    border: 1.5px solid #38299C;
+    border-radius: 6px;
+    background: #fff;
+    color: #1c1c1c;
+}
+
+.request-dialog::backdrop {
+    background: rgba(28, 28, 28, 0.55);
+}
+
+.request-dialog h2 {
+    margin: 0 0 12px;
+    color: #38299C;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.request-dialog p {
+    margin: 0 0 16px;
+    line-height: 1.6;
+}
+
+.dialog-actions {
+    margin: 20px 0 12px;
+}
+
+.dialog-alt {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.dialog-alt a,
+.request-dialog a:not(.btn) {
+    color: #38299C;
+}
+
+.dialog-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    padding: 4px 8px;
+    border: 0;
+    background: none;
+    color: #38299C;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.dialog-close:focus-visible {
+    outline: 3px solid #38299C;
+    outline-offset: 2px;
+}
+
+.request-dialog .btn:focus-visible {
+    outline-color: #38299C;
+}
+
+.guidelines {
+    max-width: 60rem;
+    margin: 16px 0;
+    padding-left: 22px;
+    color: #1c1c1c;
+    line-height: 1.6;
+}
+ 
+.guidelines li {
+    margin-bottom: 12px;
+}
+
+/* ---------- embedded previews (curriculum) ---------- */
+
+.embed-note {
+    margin: 0 0 14px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.embed-frame {
+    border: 1.5px solid #ddd;
+    border-radius: 4px;
+    background: #f4f2ee;
+    overflow: hidden;
+}
+
+.embed-frame iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+
+/* Google Slides embeds are 16:9 */
+.embed-slides iframe {
+    aspect-ratio: 16 / 9;
+}
+
+/* PDF embeds need a fixed height */
+.embed-doc iframe {
+    height: 780px;
+}
+
+.embed-fallback {
+    margin: 10px 0 24px;
+    font-size: 0.9rem;
+}
+
+.embed-fallback a {
+    color: #38299C;
+    text-underline-offset: 3px;
+}
+
+/* PDF viewers are unreliable on phones, so shrink the frame and
+   lean on the "open in a new tab" link instead */
+@media (max-width: 760px) {
+    .embed-doc iframe {
+        height: 420px;
+    }
+}
+
+/* ---------- speaker notes ---------- */
+
+.notes-heading {
+    margin: 28px 0 6px;
+    color: #38299C;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.notes {
+    margin: 0 0 24px;
+}
+
+.notes details {
+    margin-bottom: 8px;
+    border: 1.5px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.notes summary {
+    padding: 12px 16px;
+    color: #38299C;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.notes summary:focus-visible {
+    outline: 3px solid #38299C;
+    outline-offset: 2px;
+}
+
+.notes details[open] summary {
+    border-bottom: 1px solid #eee;
+}
+
+.notes p {
+    margin: 0;
+    padding: 14px 16px;
+    color: #1c1c1c;
+    line-height: 1.6;
+}
+
+.notes p + p {
+    padding-top: 0;
+}
+
+.notes .notes-empty {
+    color: #555;
+    font-style: italic;
 }
